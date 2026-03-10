@@ -84,29 +84,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Confetti Cannon Helper ---
     function createConfettiCannon(count, delayMultiplier) {
         const confettiCannonContainer = document.querySelector('.confetti-cannon-container');
-        const colors = ['var(--primary-red)', 'var(--accent-yellow)', 'var(--text-light)', '#00d8d6', '#8e44ad']; // Use CSS variables
+        const colors = ['var(--primary-red)', 'var(--accent-yellow)', 'var(--text-light)', '#00d8d6', '#8e44ad']; 
 
         for (let i = 0; i < count; i++) {
             const confetti = document.createElement('div');
             confetti.classList.add('confetti');
 
             confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-            confetti.style.left = `${Math.random() * 100}vw`; // Random start X
-            confetti.style.top = `${Math.random() * 20 - 10}vh`; // Slightly above/below top of screen
+            confetti.style.left = `${Math.random() * 100}vw`; 
+            confetti.style.top = `${Math.random() * 20 - 10}vh`; 
 
-            // Randomize duration and delay
-            const duration = Math.random() * 2 + 3; // 3-5 seconds
+          
+            const duration = Math.random() * 2 + 3; 
             const delay = Math.random() * delayMultiplier;
             confetti.style.animationDuration = `${duration}s`;
             confetti.style.animationDelay = `${delay}s`;
-            
-            // Randomize size and shape
-            const size = Math.random() * 8 + 4; // 4-12px
+
+            const size = Math.random() * 8 + 4; 
             confetti.style.width = `${size}px`;
             confetti.style.height = `${size}px`;
-            if (Math.random() > 0.5) confetti.style.borderRadius = '50%'; // Make some circular
+            if (Math.random() > 0.5) confetti.style.borderRadius = '50%'; 
 
-            // Randomize initial rotation for confetti
+           
             confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
 
             confettiCannonContainer.appendChild(confetti);
