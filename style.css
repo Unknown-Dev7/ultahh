@@ -243,7 +243,7 @@ body {
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 20px 40px var(--shadow-heavy);
-    max-width: 700px;
+    max-width: 600px;
     z-index: 10; /* Ensure card is above animations */
     animation: popIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
